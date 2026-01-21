@@ -1,19 +1,18 @@
 import axios from "axios";
 
+const API = import.meta.env.VITE_API_URL;
+
 export const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: `${API}/api`,
 });
 
 /**
  * Fetch AQI data
- * @param {string} city (optional)
- * - If city is provided → backend uses searched city
- * - If not → backend auto-detects (DB → IP)
  */
 export const getAQIData = async (city) => {
   const url = city
-    ? `http://localhost:3000/api/airQualityData?city=${encodeURIComponent(city)}`
-    : `http://localhost:3000/api/airQualityData`;
+    ? `${API}/api/airQualityData?city=${encodeURIComponent(city)}`
+    : `${API}/api/airQualityData`;
 
   const res = await fetch(url, {
     headers: {
