@@ -7,7 +7,8 @@
   min-height: 100vh;
   padding: 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-}
+} 
+
 
 .loading {
   text-align: center;
@@ -92,7 +93,9 @@
 .container {
   max-width: 1200px;
   margin: auto;
+   padding:24px;
 }
+
 
 .main-grid {
   display: grid;
