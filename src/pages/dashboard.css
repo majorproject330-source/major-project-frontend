@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+.dashboard {
+  background: #f6f8fc;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.nav-right {
+  display: flex;
+  gap: 12px;
+}
+/* SEARCH (MATCHES EXISTING NAV STYLE) */
+.search-input {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  font-size: 14px;
+  width: 160px;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #c7d2fe;
+}
+
+.search-btn {
+  background: #eef2ff;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background: #e0e7ff;
+}
+
+.search-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.city-btn {
+  background: #eef2ff;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-btn {
+  border-radius: 50%;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-gap {
+  height: 20px;
+}
+
+/* LAYOUT */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 3fr 1.3fr;
+  gap: 24px;
+}
+
+/* AQI CARD */
+.aqi-card {
+  background: #fdecec;
+  border-radius: 22px;
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.city-name {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.updated {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.dominant {
+  margin-top: 60px;
+}
+
+.aqi-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aqi-circle {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aqi-value {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.aqi-category {
+  margin-top: 10px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 700;
+}
+
+/* HEALTH CARD */
+.health-card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.health-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.risk-bar {
+  height: 14px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+
+.risk-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+.health-msg {
+  background: #fef2f2;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 14px;
+}
+
+.health-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+/* POLLUTANTS */
+.pollutants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.pollutant-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pollutant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.pollutant-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.pollutant-value {
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 6px;
+}
+
+.safe-text {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.pollutant-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.pollutant-bar span {
+  display: block;
+  height: 100%;
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btn {
+  padding: 16px;
+  border-radius: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.success {
+  background: #22c55e;
+  color: white;
+}
+
+.outline {
+  background: white;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+}
