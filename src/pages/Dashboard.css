@@ -1,0 +1,108 @@
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef4ff, #f8fbff);
+  font-family: "Inter", sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 70px;
+  padding: 0 60px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: #ff4d4f;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 77, 79, 0.4);
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  margin: 60px 0 40px;
+}
+
+.page-title h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* CARDS FLEX */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 40px 80px;
+}
+
+/* CARD */
+.card {
+  width: 280px;
+  background: white;
+  padding: 45px 30px;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 200px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cards-container {
+    gap: 30px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+}

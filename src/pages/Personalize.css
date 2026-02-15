@@ -1,0 +1,106 @@
+.personalize-container {
+  height: 100vh;
+  background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 450px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.progress {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.bar {
+  height: 6px;
+  background: linear-gradient(90deg, #2563eb, #16a34a);
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+
+.option {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option:hover {
+  background: #f3f4f6;
+}
+
+.option.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.actions button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  background: #1e40af;
+}
+.mini-option {
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mini-option.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.quick-options {
+  margin-bottom: 15px;
+}
+
+.skip-btn {
+  background: #e5e7eb !important;
+  color: black !important;
+}
