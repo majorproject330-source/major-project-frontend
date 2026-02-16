@@ -18,7 +18,7 @@ function Landing() {
           <h2>AI-Based Smart Urban Life Monitoring</h2>
           <p>
             Monitor air quality, traffic, and weather in real-time.
-            Get an AI-powered Urban Life Rating for better living decisions.
+            Get an AI-powered Explanation.
           </p>
 
           <button
@@ -35,8 +35,7 @@ function Landing() {
         <div className="section-text">
           <h3>🌫 Air Quality Intelligence</h3>
           <p>
-            Real-time AQI monitoring, pollutant analysis, and health guidance
-            powered by intelligent data processing.
+            Real-time AQI monitoring with detailed pollutant analysis and AI-powered health insights to support safer daily decisions.
           </p>
         </div>
         <div className="section-image">
@@ -49,9 +48,8 @@ function Landing() {
         <div className="section-text">
           <h3>🚦 Smart Traffic Monitoring</h3>
           <p>
-            Analyze congestion patterns, road conditions, and peak hours
-            to optimize mobility across the city.
-          </p>
+            Interactive traffic map with congestion levels, free-flow detection, delay tracking, and AI-driven mobility insights.
+            </p>
         </div>
         <div className="section-image">
           <img src={traffic} alt="Traffic Monitoring" />
@@ -63,8 +61,7 @@ function Landing() {
         <div className="section-text">
           <h3>🌦 Weather Intelligence</h3>
           <p>
-            Track temperature, humidity, wind speed and environmental
-            conditions impacting urban comfort and pollution levels.
+            Live weather tracking including temperature in Celsius, humidity, and wind speed with simple AI-generated explanations.
           </p>
         </div>
         <div className="section-image">
@@ -73,7 +70,7 @@ function Landing() {
       </section>
 
       {/* URBAN RATING */}
-      <section className="section reverse">
+      {/* <section className="section reverse">
         <div className="section-text">
           <h3>⭐ Urban Life Rating</h3>
           <p>
@@ -84,7 +81,7 @@ function Landing() {
         <div className="section-image">
           <img src={rating} alt="Urban Life Rating" />
         </div>
-      </section>
+      </section> */}
 
       {/* BOTTOM CTA */}
       <section className="cta">

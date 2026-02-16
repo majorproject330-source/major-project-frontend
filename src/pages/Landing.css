@@ -29,6 +29,7 @@ html, body {
   color: white;
 }
 
+
 .hero-content {
   animation: fadeInUp 1.2s ease forwards;
 }
@@ -74,6 +75,7 @@ html, body {
   padding: 120px 10%;
   gap: 80px;
   animation: fadeInUp 1s ease forwards;
+  background-color: #ffffff;
 }
 
 .section.reverse {

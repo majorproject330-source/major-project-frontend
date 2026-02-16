@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.traffic-wrapper {
+  padding: 30px 60px;
+  color: white;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.back-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  width: 250px;
+}
+
+.search-error {
+  border: 2px solid #e74c3c;
+}
+
+.primary-btn { background: #00c6ff; color: white; }
+.secondary-btn { background: #2c3e50; color: white; }
+.guide-btn { background: #8e44ad; color: white; }
+
+.error-box {
+  background: rgba(231,76,60,0.2);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  color: #ffb3b3;
+}
+
+.traffic-card-modern {
+  background: rgba(255,255,255,0.08);
+  padding: 28px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.congestion-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Dynamic badge colors */
+.congestion-badge.normal { background: #2ecc71; }
+.congestion-badge.slight { background: #f1c40f; }
+.congestion-badge.moderate { background: #f39c12; }
+.congestion-badge.high { background: #e74c3c; }
+.congestion-badge.severe { background: #8b0000; }
+
+.stats-modern {
+  display: flex;
+  gap: 20px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: rgba(255,255,255,0.12);
+  padding: 18px;
+  border-radius: 14px;
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+}
+
+.ai-btn-modern {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(90deg,#ff6a00,#ff8e53);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.map-container {
+  height: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: #1e1e1e;
+  padding: 28px;
+  border-radius: 18px;
+  width: 420px;
+  max-width: 90%;
+}
+
+.modal-box button {
+  margin-top: 18px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #ff6a00;
+  color: white;
+  cursor: pointer;
+}
+
+.guide-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.green { background: #2ecc71; }
+.yellow { background: #f1c40f; }
+.orange { background: #f39c12; }
+.red { background: #e74c3c; }
+.darkred { background: #8b0000; }
+
+.loader {
+  margin: 60px auto;
+  border: 5px solid #ffffff;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

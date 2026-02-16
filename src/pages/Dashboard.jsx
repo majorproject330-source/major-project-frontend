@@ -11,7 +11,7 @@ function Dashboard() {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -51,17 +51,17 @@ function Dashboard() {
           <p>Smart congestion tracking & route analysis.</p>
         </div>
 
-        <div className="card" onClick={() => navigate("/blank")}>
+        <div className="card" onClick={() => navigate("/Weather")}>
           <img src={weatherImg} alt="Weather" />
           <h3>Weather Intelligence</h3>
           <p>Real-time weather and climate updates.</p>
         </div>
 
-        <div className="card" onClick={() => navigate("/blank")}>
+        {/* <div className="card" onClick={() => navigate("/blank")}>
           <img src={ratingImg} alt="Urban Rating" />
           <h3>Urban Life Rating</h3>
           <p>AI-powered city livability score.</p>
-        </div>
+        </div> */}
 
       </div>
 

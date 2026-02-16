@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Blank from "./pages/Blank";
 import Airquality from "./pages/Airquality";
 import TrafficMonitoring  from "./pages/TrafficMonitoring";
+import Weather from "./pages/Weather";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/blank" element={<Blank />} />
         <Route path="/Airquality" element={<Airquality />} />
         <Route path="/TrafficMonitoring" element={<TrafficMonitoring />} />
+        <Route path="/Weather" element={<Weather />} />
       </Routes>
     </BrowserRouter>
   );

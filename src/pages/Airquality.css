@@ -1,0 +1,306 @@
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+.dashboard {
+  background: #f6f8fc;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 20px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;              /* 🔥 Add background */
+  padding: 16px 24px;             /* 🔥 Add spacing */
+  border-radius: 18px;            /* 🔥 Rounded look */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+/* Left side (Back + Title) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a2c45;
+}
+
+.back-btn {
+  background: #1a2c45;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.back-btn:hover {
+  background: #243b5a;
+  transform: translateX(-3px);
+}
+
+/* Right side */
+.nav-right {
+  display: flex;
+  gap: 12px;
+}
+
+/* ================= SEARCH ================= */
+.search-input {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  font-size: 14px;
+  width: 160px;
+}
+
+.search-btn {
+  background: #eef2ff;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.search-btn:hover {
+  background: #dbeafe;
+}
+
+.city-btn {
+  background: #eef2ff;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+}
+
+.profile-btn {
+  border-radius: 50%;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-gap {
+  height: 20px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 3fr 1.3fr;
+  gap: 24px;
+}
+
+/* ================= AQI CARD ================= */
+.aqi-card {
+  background: #fdecec;
+  border-radius: 22px;
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.city-name {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.updated {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.dominant {
+  margin-top: 40px;
+}
+
+.aqi-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aqi-circle {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aqi-value {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.aqi-category {
+  margin-top: 10px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 700;
+}
+
+/* ================= POLLUTANTS ================= */
+.pollutants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.pollutant-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  transition: 0.2s;
+}
+
+.pollutant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.pollutant-header {
+  display: flex;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.pollutant-value {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 6px;
+}
+
+.safe-text {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.pollutant-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.pollutant-bar span {
+  display: block;
+  height: 100%;
+}
+
+/* ================= HEALTH CARD ================= */
+.health-card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.health-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.risk-bar {
+  height: 14px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.risk-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.health-msg {
+  background: #fef2f2;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 14px;
+}
+
+.health-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+/* ================= BUTTONS ================= */
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  padding: 16px;
+  border-radius: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.primary:hover {
+  background: #1d4ed8;
+}
+
+/* ================= EXPLANATION BOX ================= */
+.explanation-box {
+  margin-top: 15px;
+  padding: 14px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.error-box {
+  margin: 15px auto;
+  padding: 12px 18px;
+  background: #ffe5e5;
+  color: #b30000;
+  border-radius: 12px;
+  text-align: center;
+  width: fit-content;
+  font-weight: 600;
+}
