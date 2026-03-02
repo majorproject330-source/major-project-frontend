@@ -3,6 +3,7 @@ import airQualityImg from "../assets/airquality.png";
 import traffic from "../assets/traffic.png";
 import weather from "../assets/weather.png";
 import rating from "../assets/rating.png";
+import cityImg from "../assets/city.png";
 import { useNavigate } from "react-router-dom";
 
 function Landing() {
@@ -82,6 +83,20 @@ function Landing() {
           <img src={rating} alt="Urban Life Rating" />
         </div>
       </section> */}
+      {/* CITY PUBLIC FEED */}
+<section className="section reverse">
+  <div className="section-text">
+    <h3>📍 City-Based Public Feed</h3>
+    <p>
+      A real-time community feed where citizens share local incidents,
+      traffic updates, weather impacts, and city happenings —
+      helping build a smarter and more connected urban environment.
+    </p>
+  </div>
+  <div className="section-image">
+    <img src={cityImg} alt="City Public Feed" />
+  </div>
+</section>
 
       {/* BOTTOM CTA */}
       <section className="cta">

@@ -5,7 +5,8 @@ import airQualityImg from "../assets/airquality.png";
 import trafficImg from "../assets/traffic.png";
 import weatherImg from "../assets/weather.png";
 import ratingImg from "../assets/rating.png";
-
+import cityImg from "../assets/city.png";
+ 
 function Dashboard() {
   const navigate = useNavigate();
 
@@ -57,11 +58,11 @@ function Dashboard() {
           <p>Real-time weather and climate updates.</p>
         </div>
 
-        {/* <div className="card" onClick={() => navigate("/blank")}>
-          <img src={ratingImg} alt="Urban Rating" />
-          <h3>Urban Life Rating</h3>
-          <p>AI-powered city livability score.</p>
-        </div> */}
+        <div className="card" onClick={() => navigate("/Cityfeed")}>
+          <img src={cityImg} alt="Urban Rating" />
+          <h3>City Public Feed</h3>
+<p>Stay connected with live posts, alerts, and updates shared by people in your city.</p>
+        </div>
 
       </div>
 
