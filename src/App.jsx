@@ -9,6 +9,7 @@ import Airquality from "./pages/Airquality";
 import TrafficMonitoring  from "./pages/TrafficMonitoring";
 import Weather from "./pages/Weather";
 import Cityfeed from "./pages/Cityfeed";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/TrafficMonitoring" element={<TrafficMonitoring />} />
         <Route path="/Weather" element={<Weather />} />
         <Route path="/Cityfeed" element={<Cityfeed />} />
+        <Route path="/Admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );

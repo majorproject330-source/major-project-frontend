@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 import "./Login.css";
 
 function Login() {
@@ -10,6 +11,8 @@ function Login() {
     password: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -19,27 +22,47 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/auth/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await res.json();
 
       if (res.ok) {
-  localStorage.setItem("token", data.token);
+        // Store token
+        localStorage.setItem("token", data.token);
 
-  if (!data.isPersonalized) {
-    navigate("/personalize");
-  } else {
-    navigate("/dashboard");
-  }
-} else {
+        // Decode token to check role
+        const decoded = jwtDecode(data.token);
+
+        /* ===========================
+           ADMIN REDIRECT
+        ============================ */
+        if (decoded.role === "admin") {
+          navigate("/Admin");
+          return;
+        }
+
+        /* ===========================
+           NORMAL USER REDIRECT
+        ============================ */
+        if (!data.isPersonalized) {
+          navigate("/personalize");
+        } else {
+          navigate("/dashboard");
+        }
+
+      } else {
         alert(data.message || "Login failed");
       }
 
@@ -47,6 +70,8 @@ function Login() {
       console.error(err);
       alert("Server error");
     }
+
+    setLoading(false);
   };
 
   return (
@@ -72,7 +97,9 @@ function Login() {
             required
           />
 
-          <button type="submit">Login</button>
+          <button type="submit" disabled={loading}>
+            {loading ? "Logging in..." : "Login"}
+          </button>
         </form>
 
         <p className="switch-text">
