@@ -10,6 +10,7 @@ import TrafficMonitoring  from "./pages/TrafficMonitoring";
 import Weather from "./pages/Weather";
 import Cityfeed from "./pages/Cityfeed";
 import Admin from "./pages/Admin";
+import OAuthSuccess from "./pages/OAuthSuccess";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/Weather" element={<Weather />} />
         <Route path="/Cityfeed" element={<Cityfeed />} />
         <Route path="/Admin" element={<Admin />} />
+        <Route path="/oauth-success" element={<OAuthSuccess />} />
       </Routes>
     </BrowserRouter>
   );

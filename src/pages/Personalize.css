@@ -6,12 +6,12 @@
   justify-content: center;
 }
 
-.card {
+.personalize-card {
   width: 450px;
   background: white;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
 .progress {
@@ -56,11 +56,6 @@ input[type="text"] {
   margin-bottom: 20px;
 }
 
-.checkbox {
-  display: block;
-  margin-bottom: 10px;
-}
-
 .actions {
   display: flex;
   justify-content: space-between;
@@ -80,6 +75,12 @@ input[type="text"] {
 .actions button:hover {
   background: #1e40af;
 }
+
+.skip-btn {
+  background: #e5e7eb !important;
+  color: black !important;
+}
+
 .mini-option {
   padding: 8px 14px;
   margin: 5px;
@@ -98,9 +99,4 @@ input[type="text"] {
 
 .quick-options {
   margin-bottom: 15px;
-}
-
-.skip-btn {
-  background: #e5e7eb !important;
-  color: black !important;
 }

@@ -77,3 +77,28 @@
   from { opacity: 0; transform: translateY(20px);}
   to { opacity: 1; transform: translateY(0);}
 }
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  color: #444;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s ease;
+}
+
+.google-btn:hover {
+  background: #f8f9fa;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}

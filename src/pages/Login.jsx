@@ -20,6 +20,9 @@ function Login() {
     });
   };
 
+  /* ===========================
+     NORMAL LOGIN
+  ============================ */
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -39,23 +42,17 @@ function Login() {
       const data = await res.json();
 
       if (res.ok) {
-        // Store token
         localStorage.setItem("token", data.token);
 
-        // Decode token to check role
         const decoded = jwtDecode(data.token);
 
-        /* ===========================
-           ADMIN REDIRECT
-        ============================ */
+        /* ADMIN REDIRECT */
         if (decoded.role === "admin") {
           navigate("/Admin");
           return;
         }
 
-        /* ===========================
-           NORMAL USER REDIRECT
-        ============================ */
+        /* NORMAL USER REDIRECT */
         if (!data.isPersonalized) {
           navigate("/personalize");
         } else {
@@ -72,6 +69,14 @@ function Login() {
     }
 
     setLoading(false);
+  };
+
+  /* ===========================
+     GOOGLE LOGIN
+  ============================ */
+  const handleGoogleLogin = () => {
+    window.location.href =
+      `${import.meta.env.VITE_API_URL}/api/auth/google`;
   };
 
   return (
@@ -101,6 +106,26 @@ function Login() {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
+
+        {/* Divider */}
+        <div style={{ margin: "20px 0", textAlign: "center" }}>
+          <span>OR</span>
+        </div>
+
+        {/* Google Button */}
+       
+<button
+  type="button"
+  className="google-btn"
+  onClick={handleGoogleLogin}
+>
+  <img
+    src="https://www.svgrepo.com/show/475656/google-color.svg"
+    alt="Google"
+    className="google-icon"
+  />
+  <span>Continue with Google</span>
+</button>
 
         <p className="switch-text">
           Don't have an account?
