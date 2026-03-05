@@ -4,6 +4,7 @@ import traffic from "../assets/traffic.png";
 import weather from "../assets/weather.png";
 import rating from "../assets/rating.png";
 import cityImg from "../assets/city.png";
+import aiAgent from "../assets/aiAgent.png";
 import { useNavigate } from "react-router-dom";
 
 function Landing() {
@@ -98,6 +99,22 @@ function Landing() {
   </div>
 </section>
 
+{/* SMART CITY AGENTIC ASSISTANT */}
+<section className="section">
+  <div className="section-text">
+    <h3>🤖 Smart City Agentic Assistant</h3>
+    <p>
+      Interact with an intelligent AI assistant that understands your city.
+      Ask about weather, air quality, traffic conditions, and public reports.
+      The agent analyzes real-time data and provides quick insights to help
+      you stay informed about your city.
+    </p>
+  </div>
+
+  <div className="section-image">
+    <img src={aiAgent} alt="Smart City Agentic Assistant" />
+  </div>
+</section>
       {/* BOTTOM CTA */}
       <section className="cta">
         <h2>Built for Awareness. Designed for Smart Cities.</h2>

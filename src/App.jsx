@@ -11,7 +11,7 @@ import Weather from "./pages/Weather";
 import Cityfeed from "./pages/Cityfeed";
 import Admin from "./pages/Admin";
 import OAuthSuccess from "./pages/OAuthSuccess";
-
+import AiAgent from "./pages/AiAgent";
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +28,7 @@ function App() {
         <Route path="/Cityfeed" element={<Cityfeed />} />
         <Route path="/Admin" element={<Admin />} />
         <Route path="/oauth-success" element={<OAuthSuccess />} />
+        <Route path="/AiAgent" element={<AiAgent />} />
       </Routes>
     </BrowserRouter>
   );

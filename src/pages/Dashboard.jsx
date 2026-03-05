@@ -6,6 +6,7 @@ import trafficImg from "../assets/traffic.png";
 import weatherImg from "../assets/weather.png";
 import ratingImg from "../assets/rating.png";
 import cityImg from "../assets/city.png";
+import Aiagent from "../assets/Aiagent.png";
  
 function Dashboard() {
   const navigate = useNavigate();
@@ -64,6 +65,16 @@ function Dashboard() {
 <p>Stay connected with live posts, alerts, and updates shared by people in your city.</p>
         </div>
 
+        <div className="card" onClick={() => navigate("/AiAgent")}>
+  <img src={Aiagent} alt="Smart City Agentic Assistant" />
+
+  <h3>Smart City Agentic Assistant</h3>
+
+  <p>
+    Ask about weather, air quality, traffic, and public city reports. 
+    Get real-time insights and alerts powered by AI.
+  </p>
+</div>
       </div>
 
     </div>
